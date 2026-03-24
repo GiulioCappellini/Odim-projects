@@ -1,0 +1,113 @@
+@charset "UTF-8";
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    vertical-align: baseline;
+    text-decoration: none;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+    -moz-tap-highlight-color: transparent;
+}
+html {
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #F4ECD8;
+    padding: 30px;
+}
+
+main {
+    border: 2px solid black;
+    background-color: #FFF8DC;
+    border-radius: 8px;
+    padding: 20px;
+    margin: auto;
+}
+
+a {
+    color: #6B8E23;
+    font-weight: bold;
+}
+
+h1 {
+    border-bottom: 3px solid #6B8E23;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.3em;
+    margin-block: 10px;
+}
+
+.img {
+    width: 100%;
+    height: 180px;
+    background: transparent center center no-repeat;
+    background-size: cover;
+    border: 2.5px solid black;
+    border-radius: 10px;
+}
+#lasagna {background-image: url(../images/Lasagna.jpg);}
+#ramen {background-image: url(../images/Ramen.jpg);}
+#pudding {background-image: url(../images/Pudding.jpg);}
+
+h2 {
+    border-bottom: 1.5px solid #6B8E23;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.3em;
+}
+
+h3 {
+    font-size: 0.95em;
+    margin-block: 10px;
+}
+
+p {
+    text-indent: 10px;
+    margin-block: 10px;
+}
+
+ul, ol {
+    margin-left: 15px;
+    margin-block: 10px;
+}
+li {
+    margin-block: 10px;
+}
+
+@media screen and (min-width: 430px) {
+    .img {
+        width: 300px;
+        margin: auto;
+    }
+    
+    main {width: 80dvw;}
+}
+
+@media screen and (min-width: 768px) {
+    main {width: 600px;}
+    .img {
+        width: 100%;
+        height: 250px;
+    }
+}
+
+.img::after {content: "";}
+@media print {
+    nav {display: none;}
+    .img::after {
+        content: "Ilustration of a Lasagna";
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 500;
+        font-size: 3em;
+        color: transparent;
+        -webkit-text-stroke: 0.2px black;
+    }
+}
